@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"net/http"
 	"os"
-    "runtime"
+	"runtime"
 	"time"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Hello world! Here's some info:\n\n")
 	time := time.Now()
-    numCPU := runtime.NumCPU()
-    version := runtime.Version()
+	numCPU := runtime.NumCPU()
+	version := runtime.Version()
 	hostname, _ := os.Hostname()
 	environ := os.Environ()
 	uid := os.Getuid()
