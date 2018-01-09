@@ -1,8 +1,7 @@
 pipeline:
   publish:
     image: plugins/docker
-    registry: registry:5000
-    insecure: true
-    repo: registry:5000/hello-world
+    registry: registry.labs.0x.no
+    repo: registry.labs.0x.no/hello-world
     tags:
       - latest
