@@ -14,14 +14,12 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	numCPU := runtime.NumCPU()
 	version := runtime.Version()
 	hostname, _ := os.Hostname()
-	environ := os.Environ()
 	uid := os.Getuid()
 	gid := os.Getgid()
 	fmt.Fprintf(w, "Time: %v\n", time)
 	fmt.Fprintf(w, "CPUs: %v\n", numCPU)
 	fmt.Fprintf(w, "Go version: %v\n", version)
 	fmt.Fprintf(w, "Hostname: %v\n", hostname)
-	fmt.Fprintf(w, "Environment: %v\n", environ)
 	fmt.Fprintf(w, "UID: %v GID: %v\n", uid, gid)
 }
 
